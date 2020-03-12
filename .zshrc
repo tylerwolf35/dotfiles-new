@@ -16,15 +16,11 @@ PURE_PROMPT_PATH_FORMATTING="%2d"
 autoload -Uz compinit
 compinit -u
 
-# load prompt
-autoload -Uz promptinit
-promptinit
-
 # add all bash commands to zsh
 source /home/tyler/.bash_profile
 
 # load user configuration files before antibody 
-#for config ($ZSHHOME/.zsh/configs/*.zsh) source $config
+# for config ($ZSHHOME/.zsh/configs/*.zsh) source $config
 
 # load auto-generated antibody file
 source "$ZSHHOME/.zsh_plugins.sh"
