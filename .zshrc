@@ -20,7 +20,7 @@ compinit -u
 source /home/tyler/.bash_profile
 
 # load user configuration files before antibody 
-# for config ($ZSHHOME/.zsh/configs/*.zsh) source $config
+for config ($ZSHHOME/.zsh/configs/*.zsh) source $config
 
 # load auto-generated antibody file
 source "$ZSHHOME/.zsh_plugins.sh"
@@ -31,15 +31,9 @@ if [[ -f $local_zshrc ]]; then
   source $local_zshrc
 fi
 
-# add to path
-export TERM=xterm-256color
-export PATH=$PATH:/home/tyler/bin
-export PATH=$PATH:/home/tyler/.gem/ruby/2.7.0/bin
-export PATH=$PATH:/home/tyler/julia-1.3.1/bin
-export PATH=$PATH:/opt/turtl
-
-# Pure prompt
-fpath+=$HOME/.zsh/pure
+# pure prompt
+autoload -U promptinit; promptinit
+prompt pure
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
