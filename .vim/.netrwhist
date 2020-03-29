@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =4
+let g:netrw_dirhist_4='/home/tyler/.config/sxhkd'
+let g:netrw_dirhist_3='/home/tyler/.config/polybar'
+let g:netrw_dirhist_2='/home/tyler/.config/bspwm'
+let g:netrw_dirhist_1='/home/tyler/.config/spotify'
