@@ -136,3 +136,6 @@
 [submodule ".vim/plugged/vimtex"]
 	path = .vim/plugged/vimtex
 	url = https://github.com/lervag/vimtex.git
+[submodule ".vim/plugged/vim-autoformat"]
+	path = .vim/plugged/vim-autoformat
+	url = https://github.com/Chiel92/vim-autoformat.git
