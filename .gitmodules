@@ -1,0 +1,6 @@
+[submodule "dotbot"]
+	path = dotbot
+	url = https://github.com/anishathalye/dotbot
+[submodule "bin/i3lock-fancy-rapid"]
+	path = bin/i3lock-fancy-rapid
+	url = https://github.com/yvbbrjdr/i3lock-fancy-rapid.git

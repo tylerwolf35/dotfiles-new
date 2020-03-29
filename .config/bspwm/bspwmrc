@@ -13,7 +13,7 @@ sxhkd &
 start-pulseaudio-x11
 picom -f -D 0 --xrender-sync --xrender-sync-fence &
 polybar main &
-feh --bg-fill ~/Pictures/blade_runner.jpg &
+feh --bg-fill ~/Pictures/maarten-van-den-heuvel-gZXx8lKAb7Y-unsplash.jpg &
 /usr/bin/lxqt-policykit-agent &
 
 # X configuration

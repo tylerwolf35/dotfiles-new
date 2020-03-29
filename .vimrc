@@ -12,6 +12,15 @@ set expandtab
 set shiftround
 set autoindent
 
+" Set python indenting
+autocmd FileType python set shiftwidth=2
+autocmd FileType python set tabstop=2
+autocmd FileType python set softtabstop=2
+
+" Anaconda
+let g:python3_host_prog = '/home/tyler/anaconda3/bin/python3'
+let g:loaded_python_provider = 0
+
 " Set indenting for frontend development 
 aug fullstack_ft_indenting
 au!
@@ -48,6 +57,7 @@ Plug 'itchyny/lightline.vim' " Status line at the bottom
 
 " http://colorswat.ch/vim/
 Plug 'kaicataldo/material.vim' " Material collection of colorschemes
+Plug 'arcticicestudio/nord-vim' " Nord colorscheme
 
 Plug 'godlygeek/tabular' " Markdown dependency
 Plug 'sheerun/vim-polyglot' " Syntax highlighting for many languages 
@@ -64,7 +74,8 @@ Plug 'metakirby5/codi.vim'
 Plug 'maximbaz/lightline-ale' " Lightline integration for linter 
 Plug 'nathanaelkane/vim-indent-guides' " Add visual indent guides 
 Plug 'tpope/vim-fugitive' " Git integration for vim
-Plug 'airblade/vim-gitgutter' " Git marks in the gutter 
+Plug 'mhinz/vim-signify' " Git marks in the gutter 
+Plug 'junegunn/gv.vim'
 Plug 'kshenoy/vim-signature' " Vim marks in the gutter 
 Plug 'jeffkreeftmeijer/vim-numbertoggle' " Hybrid mode for numbers
 
@@ -75,19 +86,57 @@ Plug 'tpope/vim-commentary' " Fast commenting
 Plug 'justinmk/vim-sneak' " Fast file jumping
 Plug 'dietsche/vim-lastplace' " Saves last edit line for a file
 
-Plug 'preservim/nerdtree' " Tree Plugin
+Plug 'neomake/neomake'
+
+Plug 'preservim/nerdtree', { 'on': [ 'NERDTreeToggle', 'NERDTreeFind' ] } " Tree Plugin
+
+Plug 'Xuyuanp/nerdtree-git-plugin', { 'on': [ 'NERDTreeToggle', 'NERDTreeFind' ] }
 
 Plug 'ryanoasis/vim-devicons' " Add file type icons
 
 Plug 'jupyter-vim/jupyter-vim' " Jupyter and Vim integration
 
+Plug 'chrisbra/csv.vim'
+
 Plug 'mileszs/ack.vim'
+
+Plug 'vim-scripts/Rename'
+
+Plug 'vim-scripts/YankRing.vim'
+
+Plug 'antoinemadec/coc-fzf'
+
+Plug 'Konfekt/FastFold'
 
 Plug 'tmhedberg/SimpylFold'
 
+Plug 'sjl/gundo.vim'
+
+Plug 'ap/vim-css-color'
+
+Plug 'junegunn/goyo.vim'
+
+Plug 'junegunn/limelight.vim'
+
+Plug 'SirVer/ultisnips'
+
+Plug 'honza/vim-snippets'
+
+Plug 'danro/rename.vim'
+
+Plug 'mhinz/vim-startify'
+
+Plug 'cohama/lexima.vim'
+
 Plug 'lambdalisue/suda.vim'
 
+Plug 'jpalardy/vim-slime'
+
+Plug 'psf/black', { 'tag': '19.10b0' }
+
 Plug 'turbio/bracey.vim'
+
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 call plug#end()
 
@@ -97,11 +146,18 @@ set termguicolors
 syntax enable
 let g:material_terminal_italics = 1
 let g:material_theme_style = 'ocean'
-colorscheme material
+" colorscheme material
+colorscheme nord
+let g:nord_uniform_diff_background = 1
+let g:nord_italic = 1
+let g:nord_italic_comments = 1
+" colorscheme molokai
+let g:molokai_original = 1
 
 " Enable lightline status and use colorscheme
 set laststatus=2
 let g:lightline = { 'colorscheme': 'material_vim', }
+let g:lightline = { 'colorscheme': 'nord', }
 let g:lightline.tabline = {
 \   'left': [ ['tabs'] ],
 \   'right': [ ['close'] ]
@@ -170,6 +226,7 @@ let g:ale_echo_msg_error_str = 'E'
 let g:ale_echo_msg_warning_str = 'W'
 let g:ale_echo_msg_format = '[%linter%] %s'
 let g:ale_lint_delay = 1500
+let b:ale_linters = ['pylint']
 
 " Indent guide settings
 let g:indent_guides_start_level = 2
@@ -192,6 +249,10 @@ let g:tex_flavor = 'latex'
 let g:vimtex_view_method = 'zathura'
 let g:vimtex_compiler_method = 'latexrun'
 
+" vim-slime config
+let g:slime_target = "neovim"
+let g:slime_python_ipython = 1
+
 " Enable hybrid mode for vim line numbres
 set number relativenumber
 
@@ -204,6 +265,9 @@ let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
 " Set command for easier saving with suda
 command! -nargs=0 Sw w suda://%
+
+" Run Black on save
+autocmd BufWritePre *.py execute ':Black'
 
 " Run python code
 function! Termpy()
