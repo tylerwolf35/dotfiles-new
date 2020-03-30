@@ -58,6 +58,7 @@ Plug 'itchyny/lightline.vim' " Status line at the bottom
 " http://colorswat.ch/vim/
 Plug 'kaicataldo/material.vim' " Material collection of colorschemes
 Plug 'arcticicestudio/nord-vim' " Nord colorscheme
+Plug 'w0ng/vim-hybrid' " Hybrid colorscheme
 
 Plug 'godlygeek/tabular' " Markdown dependency
 Plug 'sheerun/vim-polyglot' " Syntax highlighting for many languages 
@@ -102,8 +103,6 @@ Plug 'mileszs/ack.vim'
 
 Plug 'vim-scripts/Rename'
 
-Plug 'vim-scripts/YankRing.vim'
-
 Plug 'antoinemadec/coc-fzf'
 
 Plug 'Konfekt/FastFold'
@@ -136,6 +135,8 @@ Plug 'psf/black', { 'tag': '19.10b0' }
 
 Plug 'turbio/bracey.vim'
 
+Plug 'cocopon/lightline-hybrid.vim'
+
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 call plug#end()
@@ -152,12 +153,14 @@ let g:nord_uniform_diff_background = 1
 let g:nord_italic = 1
 let g:nord_italic_comments = 1
 " colorscheme molokai
+" colorscheme hybrid
 let g:molokai_original = 1
 
 " Enable lightline status and use colorscheme
 set laststatus=2
-let g:lightline = { 'colorscheme': 'material_vim', }
+" let g:lightline = { 'colorscheme': 'material_vim', }
 let g:lightline = { 'colorscheme': 'nord', }
+" let g:lightline = { 'colorscheme': 'hybrid', }
 let g:lightline.tabline = {
 \   'left': [ ['tabs'] ],
 \   'right': [ ['close'] ]
