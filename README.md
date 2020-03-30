@@ -10,7 +10,6 @@ This repository houses my current dotfiles. This repository is managed using [ya
 
 * [bspwm](https://github.com/baskerville/bspwm) <sub>window manager</sub>
 * [sxhkd](https://github.com/baskerville/sxhkd) <sub>hotkey daemon</sub>
-* [alacritty](https://github.com/alacritty/alacritty) <sub>terminal emulator</sub>
 * [kitty](https://github.com/kovidgoyal/kitty) <sub>terminal emulator</sub>
 * [i3lock-fancy-rapid](https://github.com/yvbbrjdr/i3lock-fancy-rapid) <sub>screen locking mechanism</sub>
 * [polybar](https://github.com/jaagr/polybar) <sub>improved status bar</sub>
