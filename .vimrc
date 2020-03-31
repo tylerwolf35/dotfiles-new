@@ -147,6 +147,9 @@ let g:autoformat_retab = 0
 let g:autoformat_remove_trailing_spaces = 0
 nmap <Leader>f :Autoformat<CR>
 
+" coc-explorer
+:nmap <space>e :CocCommand explorer<CR>
+
 " Autocompletion options 
 " let g:ycm_use_clangd = 0
 let g:ycm_autoclose_preview_window_after_completion = 1 

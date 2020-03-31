@@ -56,13 +56,19 @@ Plug 'chrisbra/csv.vim'
 
 Plug 'mileszs/ack.vim'
 
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+
+Plug 'junegunn/fzf.vim'
+
 Plug 'antoinemadec/coc-fzf'
 
 Plug 'Konfekt/FastFold'
 
 Plug 'tmhedberg/SimpylFold'
 
-Plug 'sjl/gundo.vim'
+Plug 'tpope/vim-abolish'
+
+Plug 'mbbill/undotree'
 
 Plug 'ap/vim-css-color'
 
