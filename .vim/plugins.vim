@@ -66,6 +66,8 @@ Plug 'Konfekt/FastFold'
 
 Plug 'tmhedberg/SimpylFold'
 
+Plug 'terryma/vim-multiple-cursors'
+
 Plug 'tpope/vim-abolish'
 
 Plug 'mbbill/undotree'
