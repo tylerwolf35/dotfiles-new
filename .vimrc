@@ -198,6 +198,9 @@ set number relativenumber
 " Bold current line number
 highlight CursorLine cterm=NONE ctermbg=NONE ctermfg=NONE guibg=NONE guifg=NONE
 
+" coc-highlight
+autocmd CursorHold * silent call CocActionAsync('highlight')
+
 " set Vim-specific sequences for RGB colors
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
@@ -214,5 +217,8 @@ function! Termpy()
 endfunction
 
 nnoremap <F9> :call Termpy() <CR>
+
+" FZF
+nnoremap <C-p> :FZF<CR>
 
 filetype on

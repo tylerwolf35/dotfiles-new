@@ -35,7 +35,7 @@ Plug 'junegunn/gv.vim'
 Plug 'kshenoy/vim-signature' " Vim marks in the gutter 
 Plug 'jeffkreeftmeijer/vim-numbertoggle' " Hybrid mode for numbers
 
-Plug 'kien/ctrlp.vim' " File search engine 
+" Plug 'kien/ctrlp.vim' " File search engine 
 Plug 'wincent/terminus' " Enable mouse, change cursor mode, etc. 
 Plug 'tpope/vim-surround' " Mappings to edit parentheses, brackets, etc.
 Plug 'tpope/vim-commentary' " Fast commenting
@@ -43,10 +43,6 @@ Plug 'justinmk/vim-sneak' " Fast file jumping
 Plug 'dietsche/vim-lastplace' " Saves last edit line for a file
 
 Plug 'neomake/neomake'
-
-Plug 'preservim/nerdtree', { 'on': [ 'NERDTreeToggle', 'NERDTreeFind' ] } " Tree Plugin
-
-Plug 'Xuyuanp/nerdtree-git-plugin', { 'on': [ 'NERDTreeToggle', 'NERDTreeFind' ] }
 
 Plug 'ryanoasis/vim-devicons' " Add file type icons
 

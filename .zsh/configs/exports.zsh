@@ -9,6 +9,7 @@ export FZF_BASE="/usr/share/fzf"
 export NODE_ENV=development
 export PATH=$PATH:/home/tyler/Downloads/SideQuest-0.10.2
 export PATH=$PATH:/home/tyler/.local/bin
+export FZF_DEFAULT_COMMAND="rg --files --hidden"
 
 export NVM_DIR="/home/tyler/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
