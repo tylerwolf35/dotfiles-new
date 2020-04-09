@@ -79,7 +79,10 @@ syntax enable
 let g:material_terminal_italics = 1
 let g:material_theme_style = 'ocean'
 " colorscheme material
-colorscheme nord
+" colorscheme nord
+" colorscheme zenburn
+" colorscheme gruvbox-material
+colorscheme gruvbox
 let g:nord_uniform_diff_background = 1
 let g:nord_italic = 1
 let g:nord_italic_comments = 1
@@ -87,34 +90,41 @@ let g:nord_italic_comments = 1
 " colorscheme hybrid
 let g:molokai_original = 1
 
+" airline
+let g:airline#extensions#coc#enabled = 1
+let g:airline#extensions#ale#enabled = 1
+let g:airline#extensions#tabline#enabled = 1
+
 " Enable lightline status and use colorscheme
 set laststatus=2
 " let g:lightline = { 'colorscheme': 'material_vim', }
-let g:lightline = { 'colorscheme': 'nord', }
+" let g:lightline = { 'colorscheme': 'nord', }
+" let g:lightline = { 'colorscheme': 'zenburn', }
+"let g:lightline= { 'colorscheme': 'gruvbox', }
 " let g:lightline = { 'colorscheme': 'hybrid', }
-let g:lightline.tabline = {
-\   'left': [ ['tabs'] ],
-\   'right': [ ['close'] ]
-\ }
-set showtabline=2  " Show tabline
-set guioptions-=e  " Don't use GUI tabline
+"let g:lightline.tabline = {
+"\   'left': [ ['tabs'] ],
+"\   'right': [ ['close'] ]
+"\ }
+"set showtabline=2  " Show tabline
+"set guioptions-=e  " Don't use GUI tabline
 
 " Extend lightline to integrate with ALE
-let g:lightline.component_expand = {
-    \  'linter_checking': 'lightline#ale#checking',
-    \  'linter_warnings': 'lightline#ale#warnings',
-    \  'linter_errors': 'lightline#ale#errors',
-    \  'linter_ok': 'lightline#ale#ok',
-    \ }
-let g:lightline.component_type = {
-    \     'linter_checking': 'left',
-    \     'linter_warnings': 'warning',
-    \     'linter_errors': 'error',
-    \     'linter_ok': 'left',
-    \ }
-let g:lightline.active = { 'right': [[ 'linter_checking', 'linter_errors', 'linter_warnings', 'linter_ok', 'cocstatus' ]] }
+"let g:lightline.component_expand = {
+"    \  'linter_checking': 'lightline#ale#checking',
+"    \  'linter_warnings': 'lightline#ale#warnings',
+"    \  'linter_errors': 'lightline#ale#errors',
+"    \  'linter_ok': 'lightline#ale#ok',
+"    \ }
+"let g:lightline.component_type = {
+"    \     'linter_checking': 'left',
+"    \     'linter_warnings': 'warning',
+"    \     'linter_errors': 'error',
+"    \     'linter_ok': 'left',
+"    \ }
+"let g:lightline.active = { 'right': [[ 'linter_checking', 'linter_errors', 'linter_warnings', 'linter_ok', 'cocstatus' ]] }
 
-let g:lightline.component_function = { 'cocstatus': 'coc#status' }
+"let g:lightline.component_function = { 'cocstatus': 'coc#status' }
 
 " Disable unnecessary language highlighting
 let g:polyglot_disabled = ['jsx', 'latex']

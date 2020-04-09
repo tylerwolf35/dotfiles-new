@@ -8,12 +8,17 @@ endif
 " vim-plug 
 call plug#begin('~/.vim/plugged')
 
-Plug 'itchyny/lightline.vim' " Status line at the bottom 
+" Plug 'itchyny/lightline.vim' " Status line at the bottom
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 " http://colorswat.ch/vim/
 Plug 'kaicataldo/material.vim' " Material collection of colorschemes
 Plug 'arcticicestudio/nord-vim' " Nord colorscheme
 Plug 'w0ng/vim-hybrid' " Hybrid colorscheme
+Plug 'jnurmine/Zenburn' " Zenburn colorscheme
+Plug 'sainnhe/gruvbox-material' " Gruvbox Material colorscheme
+Plug 'morhetz/gruvbox' " Gruvbox colorscheme
 
 Plug 'godlygeek/tabular' " Markdown dependency
 Plug 'sheerun/vim-polyglot' " Syntax highlighting for many languages 
@@ -27,7 +32,7 @@ Plug 'Chiel92/vim-autoformat' " Proper auto-formatting
 Plug 'majutsushi/tagbar' " Tagbar for viewing functions in file
 Plug 'metakirby5/codi.vim'
 
-Plug 'maximbaz/lightline-ale' " Lightline integration for linter 
+" Plug 'maximbaz/lightline-ale' " Lightline integration for linter 
 Plug 'nathanaelkane/vim-indent-guides' " Add visual indent guides 
 Plug 'tpope/vim-fugitive' " Git integration for vim
 Plug 'mhinz/vim-signify' " Git marks in the gutter 

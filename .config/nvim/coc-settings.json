@@ -1,5 +1,6 @@
 {
    "python.jediEnabled": false,
    "python.formatting.provider": "black",
-   "explorer.icon.enableNerdfont": true
+   "explorer.icon.enableNerdfont": true,
+   "explorer.width": 36
 }
